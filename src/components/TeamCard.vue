@@ -1,26 +1,19 @@
 <template>
-    <div class="col mt-5">
-        <div class="card text-white bg-dark">
-            <div class="d-flex justify-content-center p-2">
-                <svg width="12em" height="12em" viewBox="0 0 16 16" class="bi bi-person-bounding-box"
-                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z" />
-                    <path fill-rule="evenodd"
-                        d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                </svg>
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Team member 1</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                    the card's
-                    content.</p>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
+   
+    <div class="card text-white bg-info">
+        <div class="d-flex justify-content-center p-2">
+            <img :src="member.image" alt="Foto equipo" height="200" width="200">
+            
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{member.nombre}}</h5>
+            <p class="card-text"> {{member.descripcion}}</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-white" > {{member.codigo}}. {{member.rol}}</small>
         </div>
     </div>
+
 </template>
 
 <script>
