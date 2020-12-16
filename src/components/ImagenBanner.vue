@@ -1,10 +1,10 @@
 <template>
   <div>
     <!-- Image and text -->
-    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-info">
       <a class="navbar-brand" href="# ">
         <img
-          src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg "
+          src="https://www.lifeder.com/wp-content/uploads/2016/12/ramas-de-la-ciencia.png"
           width="30 "
           height="30
         "
@@ -12,30 +12,28 @@
           alt=" "
           loading="lazy "
         />
-        Bootstrap
+        Innovación y Ciencia
       </a>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav ">
         <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link" href="# "
-              >Home <span class="sr-only">(current)</span></a
+              >Inicio <span class="sr-only">(current)</span></a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="# ">Features</a>
+            <a class="nav-link" href="#Servicios">Servicios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="# ">Pricing</a>
+            <a class="nav-link" href="#Noticias">Noticias</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link disabled"
-              href="# "
-              tabindex="-1 "
-              aria-disabled="true "
-              >Disabled</a
-            >
+            <a class="nav-link" href="#Miembros">Miembros</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Contacto">Contacto</a>
+          </li>
+          
         </ul>
       </div>
     </nav>
@@ -65,64 +63,26 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <svg
-            class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
-            width="800"
-            height="400"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-            role="img"
-            aria-label="Placeholder: First slide"
-          >
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#777"></rect>
-            <text x="50%" y="50%" fill="#555" dy=".3em">First slide</text>
-          </svg>
+         <img src="https://cdn.pixabay.com/photo/2018/07/15/10/44/dna-3539309_1280.jpg" alt="Foto" height="400" width="1600">
+         
           <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            
+            <p>Estudio de las técnicas modernas de obtención y procesamiento de datos.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <svg
-            class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
-            width="800"
-            height="400"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-            role="img"
-            aria-label="Placeholder: Second slide"
-          >
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#666"></rect>
-            <text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text>
-          </svg>
+          <img src="https://cdn.pixabay.com/photo/2018/03/21/07/16/learning-3245793_1280.jpg" alt="Foto" height="400" width="1600">
+          
           <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Proceso de enseñanza-aprendizaje basado en los principios de la neuropedagogía.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <svg
-            class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
-            width="800"
-            height="400"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-            role="img"
-            aria-label="Placeholder: Third slide"
-          >
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#555"></rect>
-            <text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text>
-          </svg>
+          <img src="https://www.cs.duke.edu/sites/default/files/2019-06/datascience-banner1800x650.jpg" alt="Foto" height="400" width="1600">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
+            
             <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+              Bioestadística, análisis de datos y métodos estadísticos obtenidos en biología y medicina.
             </p>
           </div>
         </div>

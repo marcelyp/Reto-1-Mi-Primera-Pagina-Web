@@ -1,30 +1,23 @@
 <template>
     <!-- news -->
-    <div class="row mt-md-5 mt-sm-5 mt-xs-5">
-        <div class="col-lg-6 col-xs-12">
-            <div class="d-flex justify-content-center align-items-center">
+    <div class="row mt-md-5 mt-sm-5 mt-xs-5" >
+        <div class="col-lg-6 col-xs-12" v-for="(noticia, index) of noticias" :key="index">
+            <div class="d-flex justify-content-center align-items-center" >
 
                 <div class="p-3">
-                    <svg width="12em" height="12em" viewBox="0 0 16 16" class="bi bi-alarm-fill" fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M6 .5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H9v1.07a7.001 7.001 0 0 1 3.274 12.474l.601.602a.5.5 0 0 1-.707.708l-.746-.746A6.97 6.97 0 0 1 8 16a6.97 6.97 0 0 1-3.422-.892l-.746.746a.5.5 0 0 1-.707-.708l.602-.602A7.001 7.001 0 0 1 7 2.07V1h-.5A.5.5 0 0 1 6 .5zM.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.035 8.035 0 0 0 .86 5.387zM11.613 1.86a2.5 2.5 0 1 1 3.527 3.527 8.035 8.035 0 0 0-3.527-3.527zM8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5z" />
-                    </svg>
+                    <img :src="noticia.image" alt="Foto noticia" height="200" width="350">
                 </div>
 
                 <div class="p-2">
+                    <h4>{{noticia.title}}</h4>
                     <p>
-                        1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum natus, aut,
-                        voluptate maiores saepe delectus
-                        accusamus quibusdam officiis fugiat consequatur minus fugit, fuga asperiores! Eveniet alias
-                        doloremque
-                        ratione dolorum!
+                        {{noticia.description}}
                     </p>
                 </div>
 
             </div>
-            <div class="d-flex container-fluid justify-content-end pb-2 mt-n2">
-                <button type="button" class="btn btn-outline-info">Info</button>
+            <div class="d-flex container-fluid justify-content-end pb-2 mt-n2" >
+                <a :href="noticia.url" class="btn btn-info" target="_blank">Más información...</a>
             </div>
         </div>
     </div>
@@ -32,10 +25,22 @@
 </template>
 
 <script>
-//import axios from 'axios'
+import axios from 'axios'
 
 export default {
-    name:"NewsSections"
+    name:"NewsSections",
+    data(){
+        return{
+            noticias: null
+        }
+        
+    },
+    created(){
+        axios
+            .get(`https://gnews.io/api/v4/top-headlines?token=b3e26d1fb381b28584899c569b80e702&topic=science`)
+            .then( response =>{this.noticias = response.data.articles.slice(0,4)})        
+
+    }
 
 };
 </script>
